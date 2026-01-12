@@ -1,0 +1,15 @@
+# Data Science & ML Core
+numpy
+pandas
+scikit-learn
+opencv-python
+
+# Deep Learning Frameworks
+tensorflow
+torch
+torchvision
+
+# Quantum Machine Learning (For your 2026 goals)
+qiskit
+pennylane
+pennylane-qiskit
