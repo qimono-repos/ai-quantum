@@ -12,6 +12,7 @@ dependencies = [
     "pennylane>=0.43.2",
     "pennylane-qiskit>=0.36.0",
     "qiskit>=2.3.0",
+    "qiskit-aer>=0.17.2",
     "scikit-learn>=1.8.0",
     "stable-baselines3>=2.7.1",
     "tensorflow>=2.20.0",
