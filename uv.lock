@@ -31,6 +31,8 @@ dependencies = [
     { name = "pylatexenc" },
     { name = "qiskit" },
     { name = "qiskit-aer" },
+    { name = "qiskit-algorithms" },
+    { name = "qiskit-machine-learning" },
     { name = "scikit-learn" },
     { name = "stable-baselines3" },
     { name = "tensorflow" },
@@ -56,6 +58,8 @@ requires-dist = [
     { name = "pylatexenc", specifier = ">=2.10" },
     { name = "qiskit", specifier = ">=2.3.0" },
     { name = "qiskit-aer", specifier = ">=0.17.2" },
+    { name = "qiskit-algorithms", specifier = ">=0.4.0" },
+    { name = "qiskit-machine-learning", specifier = ">=0.9.0" },
     { name = "scikit-learn", specifier = ">=1.8.0" },
     { name = "stable-baselines3", specifier = ">=2.7.1" },
     { name = "tensorflow", specifier = ">=2.20.0" },
@@ -1847,6 +1851,20 @@ wheels = [
 ]
 
 [[package]]
+name = "qiskit-algorithms"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "qiskit" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e5/86/d0f8ccae25281d49ebb0e2b59076c2d815389c16a4f7a379936f21065e94/qiskit_algorithms-0.4.0.tar.gz", hash = "sha256:b945e807c9b94ba2e0d2e02898b1f1e1a33efd3b4a6dc5a45bb787c6832d4093", size = 259556, upload-time = "2025-08-29T18:32:24.076Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3c/23/ab868be0ea11e0054ac4962d27f80cc064e007f8e34b7b61808a25227cca/qiskit_algorithms-0.4.0-py3-none-any.whl", hash = "sha256:c8bfc119e270c7cd7d6013e62193914381bd71fd4cdc847c07b50c749fd0114d", size = 327840, upload-time = "2025-08-29T18:32:22.659Z" },
+]
+
+[[package]]
 name = "qiskit-ibm-provider"
 version = "0.11.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1884,6 +1902,23 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/9d/8d/26700ff17b4139637fa35d0022d2dbc38440ee130d94153d6a4c4a0153c9/qiskit_ibm_runtime-0.45.0.tar.gz", hash = "sha256:54b29d6e5201b038015f20e30ab90f846a3233a53e758f405a4c5a556fadb0bb", size = 1524924, upload-time = "2026-01-08T18:27:57.918Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/91/4b/3d41e18b0dd6a83055f2d8f9b2330f3530814c9d5e471083181927e36d26/qiskit_ibm_runtime-0.45.0-py3-none-any.whl", hash = "sha256:dff7905492deac5c66be48a457e561de41aac7033762559e06eb92ffd7f5e24e", size = 1453327, upload-time = "2026-01-08T18:27:56.145Z" },
+]
+
+[[package]]
+name = "qiskit-machine-learning"
+version = "0.9.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dill" },
+    { name = "numpy" },
+    { name = "qiskit" },
+    { name = "scikit-learn" },
+    { name = "scipy" },
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4f/09/8884e569b9d95f508c1d66bdfcddccfcb52d7d89dbf4fba302f1dcd1b180/qiskit_machine_learning-0.9.0.tar.gz", hash = "sha256:9001e77ce26e2b12770f690ea2e5000cfee68876df69175a8c1d00ff9f5f89b1", size = 243618, upload-time = "2025-12-24T09:23:10.983Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/87/42/91d8abd05a180bf7a765961a4fd5dcaa2d1ed1da79f825cbabd1ebfe198b/qiskit_machine_learning-0.9.0-py3-none-any.whl", hash = "sha256:13e9b4fd66c1ce0114ddae135f0760e6075715815e8e724e4fa29711ac683502", size = 263107, upload-time = "2025-12-24T09:23:09.728Z" },
 ]
 
 [[package]]
