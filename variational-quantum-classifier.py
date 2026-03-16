@@ -53,22 +53,30 @@ def main():
         feature_map = zz_feature_map(feature_dimension=2, reps=2, entanglement="linear")
 
     # Use a fidelity quantum kernel and a classical SVM with precomputed kernel
-    from qiskit.primitives import Sampler
-    from qiskit_aer import Aer
     from qiskit_machine_learning.kernels import FidelityQuantumKernel
     from sklearn.svm import SVC
     from sklearn.metrics import accuracy_score, classification_report
 
-    # Create a primitive sampler (uses Aer if available)
+    # Prefer StatevectorSampler for local simulation; fall back to Sampler if provided
     try:
-        sampler = Sampler()
-    except Exception:
-        # If qiskit runtime primitives unavailable, try StatevectorSampler
         from qiskit.primitives import StatevectorSampler
 
         sampler = StatevectorSampler()
+    except Exception:
+        try:
+            from qiskit.primitives import Sampler
 
-    kernel = FidelityQuantumKernel(feature_map=feature_map, quantum_instance=sampler)
+            sampler = Sampler()
+        except Exception:
+            raise RuntimeError(
+                "No suitable Qiskit sampler (StatevectorSampler or Sampler) is available in this environment"
+            )
+
+    # qiskit-machine-learning may expect the sampler argument name depending on version
+    try:
+        kernel = FidelityQuantumKernel(feature_map=feature_map, sampler=sampler)
+    except TypeError:
+        kernel = FidelityQuantumKernel(feature_map=feature_map)
 
     print("Computing training kernel matrix...")
     K_train = kernel.evaluate(x_vec=x_train)
