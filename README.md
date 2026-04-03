@@ -10,6 +10,7 @@ A hybrid development environment for Quantum Machine Learning (QML) projects. Th
 - `uv` installed on your system:
   - **Linux/macOS:** `curl -LsSf https://astral.sh/uv/install.sh | sh`
   - **Windows:** `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
+  - powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 ### Installation (The Ritual)
 
