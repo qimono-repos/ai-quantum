@@ -18,7 +18,7 @@ from qiskit_aer import Aer
 from qiskit.primitives import StatevectorSampler 
 from qiskit_machine_learning.algorithms.classifiers import VQC
 from qiskit_machine_learning.kernels import FidelityQuantumKernel
-from qiskit.circuit.library import ZZFeatureMap, RealAmplitudes, zz_feature_map #ZZFeatureMap is deprecated
+from qiskit.circuit.library import ZZFeatureMap, zz_feature_map #ZZFeatureMap is deprecated
 from qiskit_algorithms.optimizers import COBYLA
 from qiskit.transpiler import PassManager
 from qiskit.transpiler.passes import Optimize1qGatesDecomposition, CommutativeCancellation
